@@ -41,7 +41,7 @@ describe('Navigate directly to links', function() {
   });
 
 
-  it('Load the carosel Twitter boostrap page.', function() {
+  it('Ensure the active menu item is Teams.', function() {
     
     expect(element('.active a:first').text()).
         toMatch("Teams");
