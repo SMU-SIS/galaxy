@@ -14,9 +14,12 @@ if (testing=='true') {
 	myAppDev.run(function($httpBackend) {
 
   		//var player = {name: 'Sandra'};
-  		var user = {nickname: "Zen"};
+  		var user = {login_url: "/_ah/login?continue=http%3A//127.0.0.1%3A8080/",
+					nickname: "Zen",
+					logout_url: "/_ah/login?continue=http%3A//127.0.0.1%3A8080/&action=Logout"
+				   };
 
-  		$httpBackend.whenGET('/api/user').respond(user); 
+  		$httpBackend.whenGET('/api/metadata/user').respond(user); 
 
 	});
 }

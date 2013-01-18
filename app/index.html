@@ -324,8 +324,10 @@
           <img src="../assets/img/examples/slide-01.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Hi <span ng-bind="user.nickname">?</span></h1>
-              <p class="lead">The nickname variable was loaded via AJAX. This shows that the basics are in place. You now need to do this for all of the other views.</p>
+              <h1>Hi <span ng-bind="user.nickname">?</span>
+              <a href="{{user.login_url}}">(login)</a> 
+              <a href="{{user.logout_url}}"> (logout)</a></h1>
+              <p class="lead">The nickname variable was loaded via AJAX. This shows that the basics are in place. There are also example links for login and logout that will work on App Engine after you set test=false in app.js.</p>
               <a class="btn btn-large btn-primary" href="#contact">Contact</a>
             </div>
           </div>
@@ -440,7 +442,7 @@
     <script src="lib/angular/angular-resource.min.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/app.js"></script>
-    <script src="../test/lib/angular/angular-mocks.js"></script>
+    <script src="lib/angular/angular-mocks.js"></script>
 
 
     <script src="../assets/js/jquery.js"></script>
